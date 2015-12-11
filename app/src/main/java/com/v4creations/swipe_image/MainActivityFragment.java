@@ -1,4 +1,4 @@
-package com.v4creations.swip_image.swipimage;
+package com.v4creations.swipe_image;
 
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -141,7 +142,7 @@ public class MainActivityFragment extends Fragment implements View.OnTouchListen
         protected void onPostExecute(Drawable[] drawables) {
             super.onPostExecute(drawables);
             if (drawables == null) {
-                activity.showToast("Faied to load images");
+                activity.showToast(R.string.image_load_error);
             } else {
                 imageDrawables = drawables;
                 start3d();

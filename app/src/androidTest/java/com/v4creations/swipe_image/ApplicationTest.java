@@ -1,4 +1,4 @@
-package com.v4creations.swip_image.swipimage;
+package com.v4creations.swipe_image;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,17 +1,15 @@
-package com.v4creations.swip_image.swipimage;
+package com.v4creations.swipe_image;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private ProgressDialog progress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,18 +19,19 @@ public class MainActivity extends ActionBarActivity {
 
     private void initViews() {
         progress = new ProgressDialog(this);
-        progress.setMessage("Please wait...");
+        progress.setMessage(getString(R.string.please_wait));
         progress.setCancelable(false);
     }
 
-    public void showProgress(){
+    public void showProgress() {
         progress.show();
     }
 
-    public void hideProgress(){
+    public void hideProgress() {
         progress.dismiss();
     }
-    public void showToast(String s) {
+
+    public void showToast(int s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 }
